@@ -17,10 +17,8 @@ header img{
     color: rgb(194, 10, 10);
     text-align: center;
 }
-.container .tittle h2{
-    color: rgb(161, 79, 65);
-}
-.tittle h2{
+
+.tittle-h2{
     margin-top: 15px;
     text-align: center;
 }
@@ -28,9 +26,6 @@ header img{
     font-size: 1.6em;
     margin: 15px;
     color: rgb(59, 59, 59);
-}
-#btn{
-    margin: 10px;
 }
 button{
     color: rgb(59, 59, 59);
@@ -40,13 +35,11 @@ button{
 button:hover{
     color: green;
 }
-#div{
-    background-image: url(img/Lighthouse.jpg); 
+#divSaludo{
+    background-image: url(img/Lighthouse.jpg);
     background-position: center;
     background-repeat: no-repeat;
     height: 400px;
     text-align: center;
-}
-.botones{
-    display: flex;
+    margin-bottom: 10px;
 }

@@ -14,31 +14,41 @@
         
     </header>
     <div class="container">
-        <div class="tittle">
-            <h2>Un H2 para relleno</h2>
-            <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae obcaecati quibusdam ullam aspernatur amet libero. A quasi maxime laboriosam aut fuga, magnam ratione hic ex sint dignissimos earum dolore deserunt.</p>
-        </div><hr>
-        <div class="tittle">
-            <h2>Boton con JS</h2>
-            <p class="text">function 'saludo(a,b)' por consola.</p>
+        <div class="tittle-h2">
+            <h2>Curso FullStack JS</h2>
+            <p class="text">Desde funciones, variables, estructuras de control, input, addEventListener, onclick, InnerText.</p>
         </div>
-        <div>
-            <button onclick='saludo("Sergio", "Destefano")'>Saludar a Sergio</button>
-            <button onclick='saludo("Angel", "Larghi")'>Saludar a Angel</button>
-            <button onclick='saludo("Juan", "Pasman")'>Saludar a Juan</button>
+
+        <div id="eventhola">
+            <button>Hola</button>
+            Hola
         </div>
-        
-        <div class="tittle">
-            <h2>InnerText</h2>
-        </div>
-        <div id="div">
-            Bienvenidos
-        </div>
+
+        <h2 class="tittle-h2">
+            InnerText
+        </h2>
+        <p class="text">function 'saludo(a,b)' por consola. Con onclick</p>
+
+        <div id="divSaludo">Aca estamos!!!</div>
+            <div class="btn">
+                <button id="btn" onclick='saludo("Sergio", "Destefano")'>Saludar a Sergio</button>
+                <button id="btn" onclick='saludo("Angel", "Larghi")'>Saludar a Angel</button>
+                <button id="btn" onclick='saludo("Juan", "Pasman")'>Saludar a Juan</button>
+            </div>
         <hr>
-        <div id="saludo">Prueba!</div>
         
-        <button>Hola</button>
-        <button>Chau</button>
+        <div id="eventchau">
+            <button>Chau</button>
+            chau
+        </div><hr>
+        <!-- <h2 class="tittle-h2">Interactuando con intput</h2>
+        <div class="input">
+            <input type="text" name="name">
+            <input type="text" name="name">
+            <input type="text" name="name">
+            <input type="text" name="name">
+        </div> -->
+        
 
 
 
@@ -53,7 +63,9 @@
 
 
 
-    </div>
+
+
+    </div><!--container-->
     <script src="index.js" defer></script>
     <script src="index1.js" defer></script>
 </body>
