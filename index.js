@@ -6,8 +6,6 @@
 
 function saludo(nombre, apellido){
     
-    // var divRelleno = document.getElementById("div");
-
     console.log('Hola: '+ " " + nombre + " " + apellido)
         
     var fechaYHoraActual = new Date();
@@ -17,6 +15,7 @@ function saludo(nombre, apellido){
     divRelleno.innerText = 'Hola ' + nombre + " " + apellido
 
     if (horaActual >= 7 && horaActual <= 13){
+        divRelleno.innerText = 'Buenos Dias!!! ' + nombre 
         console.log('Buen Dia !!! ' + nombre)
     }
     if (horaActual > 13 && horaActual <= 19){

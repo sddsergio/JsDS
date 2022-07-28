@@ -29,6 +29,9 @@ header img{
     margin: 15px;
     color: rgb(59, 59, 59);
 }
+#btn{
+    margin: 10px;
+}
 button{
     color: rgb(59, 59, 59);
     font-weight: bold;
@@ -43,4 +46,7 @@ button:hover{
     background-repeat: no-repeat;
     height: 400px;
     text-align: center;
+}
+.botones{
+    display: flex;
 }

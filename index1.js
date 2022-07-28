@@ -1,19 +1,11 @@
-let botonHola = document.getElementById("botonHola")
-let botonChau = document.getElementById("botonChau")
+let botonHola = document.getElementById("saludo")
+let botonChau = document.getElementById("saludo")
 
 
 botonHola.addEventListener("click", saludar);
-botonChau.addEventListener("click", despedir);
+// botonChau.addEventListener("click", despedir);
+
 function saludar(){
     console.log("Hola")
-    alert (`Hola`);
-    botonHola.innertext = "Bienvenido"
+    botonHola.innerText = "Bienvenido"
 }
-function despedir(){
-    console.log("Chau")
-    botonChau.innertext = "Hasta Luego"
-    alert (`Chau `);
-}
-
-
-///despedir("Sergio", "Destefano");
