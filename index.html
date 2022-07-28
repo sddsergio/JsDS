@@ -11,7 +11,10 @@
 <body>
     <header>
         <img src="img/Desert.jpg" alt="">
-        
+        <div id="eventhola">
+            <button>Hola</button>
+            Hola
+        </div>
     </header>
     <div class="container">
         <div class="tittle-h2">
@@ -19,52 +22,58 @@
             <p class="text">Desde funciones, variables, estructuras de control, input, addEventListener, onclick, InnerText.</p>
         </div>
 
-        <div id="eventhola">
-            <button>Hola</button>
-            Hola
-        </div>
+        
 
         <h2 class="tittle-h2">
             InnerText
         </h2>
         <p class="text">function 'saludo(a,b)' por consola. Con onclick</p>
 
-        <div id="divSaludo">Aca estamos!!!</div>
+            <div id="divSaludo">Aca estamos!!!</div>
             <div class="btn">
                 <button id="btn" onclick='saludo("Sergio", "Destefano")'>Saludar a Sergio</button>
                 <button id="btn" onclick='saludo("Angel", "Larghi")'>Saludar a Angel</button>
                 <button id="btn" onclick='saludo("Juan", "Pasman")'>Saludar a Juan</button>
             </div>
-        <hr>
+           
         
+        <h2 class="tittle-h2">Interactuando con intput</h2>
+        <hr>
+        <div id="inputs">
+            <div class="input">
+                <form action="">
+                    <label for="type-transaction">Tipo</label>
+                    <input id="type-transaction" type="radio">
+                    <label for="descripcion">Descripcion</label>
+                    <input id="descripcion" type="text" name="descripcion">
+                    <label for="price">Monto</label>
+                    <input id="price" type="number" name="price">
+                    <label for="categoria">Categoria</label>
+                    <input id="categoria" type="text" name="categoria">
+                    <button>Enviar</button>
+                </form>
+            </div>
+        </div>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <div id="eventchau">
             <button>Chau</button>
             chau
         </div><hr>
-        <!-- <h2 class="tittle-h2">Interactuando con intput</h2>
-        <div class="input">
-            <input type="text" name="name">
-            <input type="text" name="name">
-            <input type="text" name="name">
-            <input type="text" name="name">
-        </div> -->
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </div><!--container-->
     <script src="index.js" defer></script>
     <script src="index1.js" defer></script>
