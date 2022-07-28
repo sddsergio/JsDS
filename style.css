@@ -37,8 +37,8 @@ button{
 button:hover{
     color: green;
 }
-#document-js{
-    background-image: url(img/Lighthouse.jpg);
+#div{
+    background-image: url(img/Lighthouse.jpg); 
     background-position: center;
     background-repeat: no-repeat;
     height: 400px;
