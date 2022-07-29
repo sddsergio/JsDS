@@ -24,11 +24,13 @@ function saludo(nombre, apellido){
         console.log(`Buenas Tardes, ${nombre + " " + apellido}`) 
         divSaludo.innerText = (firstPartMessage)
     }
-    if (horaActual > 19 && horaActual < 7){
+    if (horaActual > 19 && horaActual > 0) {
         firstPartMessage = `Buenas Noches, ${nombre + " " + apellido}`
         console.log(`Buenas Noches, ${nombre + " " + apellido}`) 
         divSaludo.innerText = (firstPartMessage)
     }
+    else
+        console.log("Estas durmiendo")
 }
 
 saludo("Sergio", "Destefano")

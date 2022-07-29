@@ -44,3 +44,18 @@ button:hover{
     text-align: center;
     margin-bottom: 10px;
 }
+#inputs{
+    text-align: center;
+}
+.inputs div{
+    margin-top: 5px;    
+}
+th,
+td{
+    text-align: center;
+    border: 1px solid black;
+    padding: 10px;
+}
+.table table{
+    margin: 0 auto;
+}

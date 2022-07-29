@@ -35,23 +35,63 @@
             </div>
            
         
-        <h2 class="tittle-h2">Interactuando con intput</h2>
-        <hr>
+            <hr>
+            <h2 class="tittle-h2">"App"</h2>
         <div id="inputs">
-            <div class="input">
-                <form action="">
-                    <label for="type-transaction">Tipo</label>
-                    <input id="type-transaction" type="radio">
+            <form id="form">
+                <div>
+                    Tipo de Transaccion
+                    <label for="Ingreso">Ingreso</label>
+                    <input id="ingreso" type="radio" name="ingreso">
+                    <label for="Egreso">Egreso</label>
+                    <input id="ingreso" type="radio" name="ingreso">
+                </div>
+                <div>
                     <label for="descripcion">Descripcion</label>
                     <input id="descripcion" type="text" name="descripcion">
+                </div>
+                <div>
                     <label for="price">Monto</label>
                     <input id="price" type="number" name="price">
+                </div>
+                <div>
                     <label for="categoria">Categoria</label>
                     <input id="categoria" type="text" name="categoria">
-                    <button>Enviar</button>
-                </form>
-            </div>
-        </div>
+                </div>
+                <button>Enviar</button>
+            </form>
+            
+            <div class="table">
+                <table>
+                    <tr>
+                        <th>
+                            Tipo
+                        </th>
+                        <th>
+                            Descripcion
+                        </th>
+                        <th>
+                            Monto
+                        </th>
+                        <th>
+                            Categoria
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>Ingreso</td>
+                        <td>Sueldo</td>
+                        <td>1000</td>
+                        <td>Trabajo</td>
+                    </tr>
+                    <tr>
+                        <td>Egreso</td>
+                        <td>Sanguche</td>
+                        <td>200</td>
+                        <td>Comida</td>
+                    </tr>
+                </table>
+            </div><!--table-->
+        </div><hr><!--inputs-->
         
 
 
