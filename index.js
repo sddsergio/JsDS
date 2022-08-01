@@ -12,26 +12,28 @@ function saludo(nombre, apellido){
     var firstPartMessage = "";
     
     console.log(horaActual)
-    
-    
+        
     if (horaActual > 7 && horaActual < 13){
         firstPartMessage = `Buenos Dias, ${nombre + " " + apellido}`
         console.log(`Buenos Dias, ${nombre + " " + apellido}`) 
         divSaludo.innerText = (firstPartMessage)
     }
-    if (horaActual > 13 && horaActual < 19){
+    if (horaActual >= 13 && horaActual < 19){
         firstPartMessage = `Buenas Tardes, ${nombre + " " + apellido}`
         console.log(`Buenas Tardes, ${nombre + " " + apellido}`) 
         divSaludo.innerText = (firstPartMessage)
     }
-    if (horaActual > 19 && horaActual > 0) {
+    if (horaActual >= 19 && horaActual > 0) {
         firstPartMessage = `Buenas Noches, ${nombre + " " + apellido}`
         console.log(`Buenas Noches, ${nombre + " " + apellido}`) 
         divSaludo.innerText = (firstPartMessage)
-    }
-    else
-        console.log("Estas durmiendo")
-}
+    }    
+    if (horaActual > 0  && horaActual < 7) {
+        firstPartMessage = `Buenas Noches, ${nombre + " " + apellido}`
+        console.log(`Buenas Noches, ${nombre + " " + apellido}`) 
+        divSaludo.innerText = (firstPartMessage)
+    }}
+
 
 saludo("Sergio", "Destefano")
 // saludo("Angel", "Larghi")
