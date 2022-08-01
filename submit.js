@@ -11,20 +11,29 @@ transactionForm.addEventListener("submit", function(event){
 document.addEventListener("DOMContentLoaded", function(event) {
     let transactionObjArr = JSON.parse(localStorage.getItem("transactionData"));
     transactionObjArr.forEach(function(arrayElement) {
-        insertRowTable(arrayElement)
-    });
+    insertRowTable(arrayElement)
+    })
 })
+
+function getNewTransactionId() {
+    let lastTransactionId = localStorage.getItem("lastTransactionId") || "-1";
+    let newTransactionId = JSON.parse(lastTransactionId) + 1;
+    localStorage.setItem("lastTransactionId", JSON.stringify(newTransactionId));
+    return newTransactionId;
+}
 
 function convertFormDataToObj(transactionFormData) {
     let typeSelector = transactionFormData.get("typeSelector");
     let description = transactionFormData.get("description");
     let price = transactionFormData.get("price");
     let category = transactionFormData.get("category");
+    let transactionId = getNewTransactionId();
     return{
         "typeSelector": typeSelector,
         "description": description,
         "price": price,
-        "category": category
+        "category": category,
+        "transactionId": transactionId
     }
 }
 
@@ -43,11 +52,21 @@ function insertRowTable(transactionObj) {
 
         newTypeCellRef = newTypeRowRef.insertCell(3);
         newTypeCellRef.textContent = transactionObj["category"]
+
+        let newDeleteCell = newTypeRowRef.insertCell(4);
+        let deleteButton = document.createElement("button");
+        deleteButton.textContent = "Eliminar"
+        newDeleteCell.appendChild(deleteButton);
+
+        deleteButton.addEventListener("click", (event) => {
+            event.target.parentNode.parentNode.remove()
+        })
+
 }
 
 function saveTransactionObj(transactionObj) { 
-    let myTransactionArray = JSON.parse(localStorage.getItem("transactionData")) || [];
-    myTransactionArray.push(transactionObj);
+    let myTransactionArray = JSON.parse(localStorage.getItem("transactionData")) || [];//obtengp el array
+    myTransactionArray.push(transactionObj);//agrego un array
     //Convierto el array en JSON
     let transactionArrayJSON = JSON.stringify(myTransactionArray);
     //Guardo en formato JSON
@@ -56,4 +75,4 @@ function saveTransactionObj(transactionObj) {
 
 
     
-
+ 

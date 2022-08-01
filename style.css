@@ -44,7 +44,7 @@ button:hover{
     margin-bottom: 10px;
     background-image: url(img/Lighthouse.jpg);
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; 
 }
 #transactionForm{
     text-align: center;

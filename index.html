@@ -19,19 +19,21 @@
     <div class="container">
         <div class="tittle-h2">
             <h2>Curso FullStack JS</h2>
-            <p class="text">Desde funciones, variables, estructuras de control, input, addEventListener, onclick, InnerText.</p>
+            <p>Desde funciones, variables, estructuras de control, input, addEventListener, onclick, InnerText.</p>
         </div>
-        <div id="divSaludo">Aca estamos!!</div>
+        <div id="divSaludo"> Aca estamos!!
+            <img src="img/Desert.jpg" alt="">
+        </div>
         <div class="btn">
             <button id="btn" onclick='saludo("Sergio", "Destefano")'>Saludar a Sergio</button>
-            <button id="btn" onclick='saludo("Angel", "Larghi")'>Saludar a Angel</button>
-            <button id="btn" onclick='saludo("Juan", "Pasman")'>Saludar a Juan</button>
+            <!--<button id="btn" onclick='saludo("Angel", "Larghi")'>Saludar a Angel</button>
+            <button id="btn" onclick='saludo("Juan", "Pasman")'>Saludar a Juan</button>-->
         </div>
         <hr>
         <h2 class="tittle-h2">"App de nuestra economia"</h2>
         
         <form id="transactionForm">
-                <div class="formField">
+                <div class="formField" data-typeSelector="2">
                     <label for="ingreso">Ingreso</label>
                     <input id="ingreso" type="radio" name="typeSelector" value="Ingreso" checked>
                     <label for="egreso">Egreso</label>
@@ -67,22 +69,35 @@
                         <th>
                             Categoria
                         </th>
+                        <th>
+                            Eliminar
+                        </th>
                     </tr>
                 </table>
         </div><!--table-->
         
-        <div class="prevent">
+        <div class="info">
             <h2>Prevent Default</h2>
             <p>¿Que siginifica? Detener o prevenir el comportamiento por defecto del navegador.</p>
-        </div>
-        <div class="localStorage">
+            <br>
             <h2>Local Storage</h2>
             <p>localStorage.setItem("salario", "1000") lo guarda en el LS. localStorage.getItem("salario") lo obtiene.</p>
             <p>Guardarlo en el localStorage</p>
-        </div>
-        <div class="json">
+            <br>
             <h2>JSON stringify & parse</h2>
             <p>JSON.strigify() Lo convierte en un string. Sea un array o un objeto. Json.parse() lo vuelve a convertir en lo que era.</p>
+            <br>
+            <h2>data-atributte</h2>
+            <p>data-nombreDeAtributo ="x"</p>
+            <br>
+            <h2>QuerySelector</h2>
+            <p>Metodo para seleccionar todo lo que tiene el DOM o el HTML.
+                document.querySelector(".class")("#id")o document.querySelector('[data-nombreDeAtributo ="x"]') o querySelectorAll.
+            Entre [] podemos seleccionar todos los elementos de HTML.</p>
+            <h2>Metodo filter</h2>
+            <p>Para Eliminar elementos del array que no cumpla con una condicion.</p>
+        
+        
         </div>
         
 
