@@ -2,12 +2,18 @@ const transactionForm = document.getElementById("transactionForm")
 
 transactionForm.addEventListener("submit", function(event){
         event.preventDefault();
-        let transactionFormData = new FormData(transactionForm);
-        let transactionObj = convertFormDataToObj(transactionFormData)
-        saveTransactionObj(transactionObj)
-        insertRowTable(transactionObj)
-        transactionForm.reset();
+        if (transactionForm.price.value > 0) {
+            let transactionFormData = new FormData(transactionForm);
+        let transactionObj = convertFormDataToObj(transactionFormData);
+        saveTransactionObj(transactionObj);
+        insertRowTable(transactionObj);
+        transactionForm.reset()
+        }
+        else{
+            alert("Monto ignresado no es correcto");
+        }
     })
+
 document.addEventListener("DOMContentLoaded", function(event) {
     let transactionObjArr = JSON.parse(localStorage.getItem("transactionData"));
     transactionObjArr.forEach(function(arrayElement) {
@@ -40,6 +46,7 @@ function convertFormDataToObj(transactionFormData) {
 function insertRowTable(transactionObj) {
         let transactionTableRef = document.getElementById("transactionTable");
         let newTypeRowRef = transactionTableRef.insertRow(-1);//ingreso una fila al final
+        newTypeRowRef.setAttribute("data-transaction-id", transactionObj["transactionId"]);
         
         let newTypeCellRef = newTypeRowRef.insertCell(0);//ingreso una celda en la posicion(0)
         newTypeCellRef.textContent = transactionObj["typeSelector"]//le agrego un valor
@@ -59,9 +66,25 @@ function insertRowTable(transactionObj) {
         newDeleteCell.appendChild(deleteButton);
 
         deleteButton.addEventListener("click", (event) => {
-            event.target.parentNode.parentNode.remove()
+            let newTypeRowRef = event.target.parentNode.parentNode;
+            let transactionId = newTypeRowRef.getAttribute("data-transaction-id");
+            newTypeRowRef.remove();
+            deleteTransactionObj(transactionId);
         })
+}
 
+function deleteTransactionObj(transactionId){
+    //Obtengo el array del LS en "transactionObjArr"
+    let transactionObjArr = JSON.parse(localStorage.getItem("transactionData"));
+    //Busco el indice cuando se presiona el boton delete
+    let transactionIndexInArray = transactionObjArr.findIndex(element => element.transactionId === transactionId)
+    //Lo borro
+    transactionObjArr.splice(transactionIndexInArray, 1)
+    //lo convierto en string y lo guardo en el LS
+    let transactionArrayJSON = JSON.stringify(transactionObjArr);
+    localStorage.setItem("transactionData", transactionArrayJSON)
+
+    ///transactionIndexInArray.remove()
 }
 
 function saveTransactionObj(transactionObj) { 

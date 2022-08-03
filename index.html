@@ -32,26 +32,47 @@
         <hr>
         <h2 class="tittle-h2">"App de nuestra economia"</h2>
         
-        <form id="transactionForm">
+        <!-- <form id="transactionForm">
                 <div class="formField" data-typeSelector="2">
                     <label for="ingreso">Ingreso</label>
-                    <input id="ingreso" type="radio" name="typeSelector" value="Ingreso" checked>
+                    <input required id="ingreso" type="radio" name="typeSelector" value="Ingreso"> 
                     <label for="egreso">Egreso</label>
-                    <input id="egreso" type="radio" name="typeSelector" value="Egreso">
+                    <input required id="egreso" type="radio" name="typeSelector" value="Egreso">
                 </div>
                 <div class="formField">
                     <label for="description">Descripcion</label>
-                    <input id="description" type="text" name="description">
+                    <input required id="description" type="text" name="description">
                 </div>
                 <div class="formField">
                     <label for="price">Monto</label>
-                    <input id="price" type="number" name="price">
+                    <input min="0" required id="price" type="number" name="price">
                 </div>
                 <div class="formField">
                     <label for="category">Categoria</label>
-                    <input id="category" type="text" name="category">
+                    <input required id="category" type="text" name="category">
                 </div>
                 <button>Enviar</button>
+        </form> -->
+        <form id="transactionForm">
+            <div class="formField" data-typeSelector="2">
+                <label for="ingreso">Ingreso</label>
+                <input id="ingreso" type="radio" name="typeSelector" value="Ingreso"> <!--checked-->
+                <label for="egreso">Egreso</label>
+                <input id="egreso" type="radio" name="typeSelector" value="Egreso">
+            </div>
+            <div class="formField">
+                <label for="description">Descripcion</label>
+                <input id="description" type="text" name="description">
+            </div>
+            <div class="formField">
+                <label for="price">Monto</label>
+                <input id="price" type="number" name="price">
+            </div>
+            <div class="formField">
+                <label for="category">Categoria</label>
+                <input id="category" type="text" name="category">
+            </div>
+            <button>Enviar</button>
         </form>
             
         <div class="table">
