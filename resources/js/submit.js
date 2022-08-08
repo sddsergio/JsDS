@@ -1,13 +1,14 @@
-const transactionForm = document.getElementById("transactionForm")
+const transactionForm = document.getElementById("transactionForm");
 
 transactionForm.addEventListener("submit", function(event){
         event.preventDefault();
         if (transactionForm.price.value > 0) {
             let transactionFormData = new FormData(transactionForm);
-        let transactionObj = convertFormDataToObj(transactionFormData);
-        saveTransactionObj(transactionObj);
-        insertRowTable(transactionObj);
-        transactionForm.reset()
+            let transactionObj = convertFormDataToObj(transactionFormData);
+            console.log(transactionObj)
+            saveTransactionObj(transactionObj);
+            insertRowTable(transactionObj);
+            transactionForm.reset()
         }
         else{
             alert("Monto ignresado no es correcto");
@@ -15,6 +16,7 @@ transactionForm.addEventListener("submit", function(event){
     })
 
 document.addEventListener("DOMContentLoaded", function(event) {
+    draw_category();
     let transactionObjArr = JSON.parse(localStorage.getItem("transactionData"));
     transactionObjArr.forEach(function(arrayElement) {
     insertRowTable(arrayElement)
@@ -83,7 +85,6 @@ function deleteTransactionObj(transactionId){
     //lo convierto en string y lo guardo en el LS
     let transactionArrayJSON = JSON.stringify(transactionObjArr);
     localStorage.setItem("transactionData", transactionArrayJSON)
-
     ///transactionIndexInArray.remove()
 }
 
@@ -96,6 +97,17 @@ function saveTransactionObj(transactionObj) {
     localStorage.setItem("transactionData", transactionArrayJSON)
 }
 
-
+function draw_category() {
+    let allCategories = [
+        "Alquiler", "Comida", "Diversion", "Salario", "Trabajo", "Gastos Varios"
+    ]
+    for (let index = 0; index < allCategories.length; index++) {
+        insertCategory(allCategories[index])
+    }
+}
+function insertCategory(categoryName) {
+    const selectElement = document.getElementById("category");
+    let htmlToInsert = `<option> ${categoryName} </option>`
+    selectElement.insertAdjacentHTML("beforeend", htmlToInsert)
+}
     
- 
