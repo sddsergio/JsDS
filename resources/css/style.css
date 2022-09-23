@@ -45,4 +45,6 @@ td{
 .table table{
     margin: 0 auto;
 }
-
+#divSaludo img{
+    width: 100%;
+}
