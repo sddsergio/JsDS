@@ -1,4 +1,4 @@
-const image = document.createElement('img')
-image.src = 'resources/img/Desert.jpg'
+// const image = document.createElement('img')
+// image.src = 'resources/img/Desert.jpg'
 
-document.querySelector('.imagenJs').appendChild(image)
+// document.querySelector('.imagenJs').appendChild(image)
