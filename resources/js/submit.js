@@ -99,7 +99,7 @@ function saveTransactionObj(transactionObj) {
 
 function draw_category() {
     let allCategories = [
-        "Alquiler", "Comida", "Diversion", "Salario", "Trabajo", "Gastos Varios"
+        "Alquiler", "Comida", "Diversion", "Salario", "Trabajo", "Gastos Varios", "Ahorro", "Inversiones"
     ]
     for (let index = 0; index < allCategories.length; index++) {
         insertCategory(allCategories[index])
